@@ -21,6 +21,7 @@ import LessonVideos from '../screens/LessonVideos';
 import Mentor from '../screens/Mentor/';
 import QuestionTargets from '../screens/QuestionTargets';
 import Profile from '../screens/Profile';
+import Videos from '../screens/videos';
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -34,10 +35,13 @@ function Router({navigation}) {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="Ana Sayfa" component={MyTabs} />
-        <Stack.Screen name="Chronometer " component={Chronometer} />
-        <Stack.Screen name="LessonVideos " component={LessonVideos} />
-        <Stack.Screen name="Mentor " component={Mentor} />
-        <Stack.Screen name="QuestionTargets " component={QuestionTargets} />
+        <Stack.Screen name="Chronometer" component={Chronometer} />
+        <Stack.Screen name="LessonVideos" component={LessonVideos} />
+        <Stack.Screen name="Mentor" component={Mentor} />
+        <Stack.Screen name="QuestionTargets" component={QuestionTargets} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Graph" component={Graph} />
+        <Stack.Screen name="Videos" component={Videos} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -48,7 +52,7 @@ function Router({navigation}) {
         initialRouteName="Ana Sayfa"
         activeColor="#f0edf6"
         inactiveColor="#3e2465"
-        barStyle={{backgroundColor: '#694fad'}}>
+        barStyle={{backgroundColor: '#7174d0'}}>
         <Tab.Screen
           options={{
             tabBarLabel: 'Ana Sayfa',
@@ -70,8 +74,8 @@ function Router({navigation}) {
               />
             ),
           }}
-          name="Graph "
-          component={Graph}
+          name="LessonVideos"
+          component={LessonVideos}
         />
         <Tab.Screen
           options={{

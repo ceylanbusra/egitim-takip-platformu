@@ -11,76 +11,73 @@ import {
   TouchableOpacity,
   FlatList,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const DATA = [
   {
     id: '1',
     title: 'Ders Videoları',
-    image: '../assets/Students.png',
-    routeName: 'Graph',
+    image: require('../assets/lessonVideos.png'),
+    routeName: 'LessonVideos',
   },
   {
     id: '2',
     title: 'Soru Hedefleri',
-    image: '../assets/Students.png',
-    routeName: 'Graph',
+    image: require('../assets/soru_hedefleri.png'),
+    routeName: 'QuestionTargets',
   },
   {
     id: '3',
     title: 'Profilim',
-    image: '../assets/Students.png',
-    routeName: 'Graph',
+    image: require('../assets/danisman.png'),
+    routeName: 'Profile',
   },
   {
     id: '4',
     title: 'Grafiklerim',
-    image: '../assets/Students.png',
+    image: require('../assets/Students.png'),
     routeName: 'Graph',
   },
   {
     id: '5',
     title: 'Danışman',
-    image: '../assets/Students.png',
-    routeName: 'Graph',
+    image: require('../assets/danisman.png'),
+    routeName: 'Mentor',
   },
   {
     id: '6',
     title: 'Kronometre',
-    image: '../assets/Students.png',
-    routeName: 'Graph',
+    image: require('../assets/lessonVideos.png'),
+    routeName: 'Chronometer',
   },
 ];
 
-const Item = ({
-  navigation: navigate,
-  item,
-  onPress,
-  backgroundColor,
-  textColor,
-}) => (
-  <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
-    <Image
-      source={item.image}
-      style={{width: 160, height: 150, flex: 1}}></Image>
-    <Text style={[styles.title, textColor]}>{item.title}</Text>
-  </TouchableOpacity>
-);
-
-const MainPage = ({navigation}) => {
+const MainPage = props => {
   const [selectedId, setSelectedId] = useState(null);
   const numColumns = 2;
+  const navigation = useNavigation();
 
-  const renderItem = ({item}) => {
-    const backgroundColor = item.id === selectedId ? '#a47386' : '#7174d0';
-    const color = item.id === selectedId ? '#fbfcfd' : '#1e2944';
-
+  const renderItem = ({item}, props) => {
+    console.log('returnun üstü', item.id);
     return (
-      <Item
-        item={item}
-        onPress={() => setSelectedId(item.id)}
-        backgroundColor={{backgroundColor}}
-        textColor={{color}}
-      />
+      <TouchableOpacity
+        onPress={props => {
+          console.log('çalışan yer 1', item);
+          setSelectedId(item.id);
+          console.log('calisan yer 2', selectedId);
+          navigation.navigate(item.routeName);
+        }}
+        style={[styles.item]}>
+        <Image
+          source={item.image}
+          style={{
+            width: 160,
+            height: 150,
+            flex: 1,
+            resizeMode: 'contain',
+          }}></Image>
+        <Text style={[styles.title]}>{item.title}</Text>
+      </TouchableOpacity>
     );
   };
 
@@ -109,9 +106,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 10,
     borderRadius: 8,
+    backgroundColor: '#0066FF',
   },
   title: {
     fontSize: 20,
+    color: '#fbfcfd',
   },
 });
 

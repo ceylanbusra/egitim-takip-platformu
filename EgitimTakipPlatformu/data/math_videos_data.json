@@ -1,0 +1,77 @@
+[
+  {
+    "isExpanded": false,
+    "category_name": "Temel Kavramlar",
+    "subcategory": [{"id": 1, "val": "Sub Cat 1"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Bölme Ve Bölünebilme Kuralları",
+    "subcategory": [{"id": 4, "val": "Sub Cat 4"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Rasyonel Sayılar",
+    "subcategory": [{"id": 7, "val": "Sub Cat 7"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Basit Eşitsizlikler",
+    "subcategory": [{"id": 10, "val": "Sub Cat 10"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Üslü Sayılar",
+    "subcategory": [{"id": 13, "val": "Sub Cat 13"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Çarpanlara Ayırma",
+    "subcategory": [{"id": 17, "val": "Sub Cat 17"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Oran-Orantı",
+    "subcategory": [{"id": 20, "val": "Sub Cat 20"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Kümeler",
+    "subcategory": [{"id": 22, "val": "Sub Cat 22"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Polinomlar",
+    "subcategory": [{"id": 26, "val": "Sub Cat 26"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Parabol",
+    "subcategory": [{"id": 28, "val": "Sub Cat 28"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Sayı Basamakları",
+    "subcategory": [{"id": 31, "val": "Sub Cat 31"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Asal Çarpanlara Ayırma",
+    "subcategory": [{"id": 34, "val": "Sub Cat 34"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Ondalıklı Sayılar",
+    "subcategory": [{"id": 38, "val": "Sub Cat 38"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Mutlak Değer",
+    "subcategory": [{"id": 40, "val": "Sub Cat 40"}]
+  },
+  {
+    "isExpanded": false,
+    "category_name": "Köklü Sayılar",
+    "subcategory": [{"id": 43, "val": "Sub Cat 43"}]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Türkçe",
+    "routeName": "Videos"
+  },
+  {
+    "id": 2,
+    "title": "Matematik",
+    "routeName": "Videos"
+  },
+  {
+    "id": 3,
+    "title": "Fizik",
+    "routeName": "Graph"
+  },
+  {
+    "id": 4,
+    "title": "Kimya",
+    "routeName": "Graph"
+  },
+  {
+    "id": 5,
+    "title": "Biyoloji",
+    "routeName": "Graph"
+  },
+  {
+    "id": 6,
+    "title": "Edebiyat",
+    "routeName": "Graph"
+  },
+  {
+    "id": 7,
+    "title": "Geometri",
+    "routeName": "Graph"
+  },
+  {
+    "id": 8,
+    "title": "İnkılap",
+    "routeName": "Graph"
+  },
+  {
+    "id": 9,
+    "title": "Tarih",
+    "routeName": "Graph"
+  },
+  {
+    "id": 10,
+    "title": "Coğrafya",
+    "routeName": "Graph"
+  }
+]
