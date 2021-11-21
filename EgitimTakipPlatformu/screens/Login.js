@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
+ 
   StyleSheet,
   Text,
   View,
@@ -10,6 +9,9 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import LottieView from 'lottie-react-native';
+
 
 const LoginScreen = ({navigation}) => {
   const [eMail, setEmail] = useState();
@@ -18,11 +20,9 @@ const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.photograph}>
-        <Image
-          source={require('../assets/Happy_Students.png')}
-          style={styles.photo}></Image>
-      </View>
+      <LottieView style={styles.photo} source={require('../assets/happy-students1.json')} autoPlay loop />
 
+      </View>
       <View style={styles.content}>
         <Text
           style={{
@@ -35,18 +35,29 @@ const LoginScreen = ({navigation}) => {
           }}>
           Giriş Yap
         </Text>
+        <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+        <MaterialCommunityIcons style={{paddingTop:20}} name="at"  color={'#0066FF'}  size={28} />
+        
         <TextInput
           value={eMail}
           onChangeText={value => setEmail(value)}
           style={styles.textInput}
-          placeholder="@ E-mail "></TextInput>
+          placeholder=" E-mail "></TextInput>
+        </View>
+        <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+        <MaterialCommunityIcons name="lock" style={{paddingTop:20}} color={'#0066FF'} size={28} />
+ 
         <TextInput style={styles.textInput} placeholder="Parola "></TextInput>
+        </View>
+        
         <TouchableOpacity
           onPress={() => {
             navigation.navigate('ForgotPassword');
           }}
           style={{alignItems: 'flex-end'}}>
-          <Text style={{color: '#0124fb'}}>Parolamı unuttum</Text>
+          <Text style={{color: '#0066FF', elevation: 5, opacity: 0.8}}>
+            Parolamı unuttum
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -98,13 +109,18 @@ const styles = StyleSheet.create({
     borderColor: '#999dec',
     marginVertical: 15,
     width: '100%',
+    padding:10,
+  
+    
   },
   button: {
     justifyContent: 'center',
     alignItems: 'center',
     width: '85%',
     height: '12%',
-    backgroundColor: 'blue',
+    backgroundColor: '#0066FF',
+    elevation: 5,
+    opacity: 0.8,
     borderRadius: 8,
     margin: 20,
     marginTop: 30,

@@ -10,14 +10,17 @@ import {
   TextInput,
   TouchableOpacity,
   FlatList,
+  Dimensions,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const DATA = [
   {
     id: '1',
     title: 'Ders Videoları',
-    image: require('../assets/lessonVideos.png'),
+    image: require('../assets/lessoVideos2.png'),
     routeName: 'LessonVideos',
   },
   {
@@ -35,7 +38,7 @@ const DATA = [
   {
     id: '4',
     title: 'Grafiklerim',
-    image: require('../assets/Students.png'),
+    image: require('../assets/graph.png'),
     routeName: 'Graph',
   },
   {
@@ -47,7 +50,7 @@ const DATA = [
   {
     id: '6',
     title: 'Kronometre',
-    image: require('../assets/lessonVideos.png'),
+    image: require('../assets/clock.png'),
     routeName: 'Chronometer',
   },
 ];
@@ -68,14 +71,7 @@ const MainPage = props => {
           navigation.navigate(item.routeName);
         }}
         style={[styles.item]}>
-        <Image
-          source={item.image}
-          style={{
-            width: 160,
-            height: 150,
-            flex: 1,
-            resizeMode: 'contain',
-          }}></Image>
+        <Image source={item.image} style={styles.image}></Image>
         <Text style={[styles.title]}>{item.title}</Text>
       </TouchableOpacity>
     );
@@ -101,12 +97,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  image: {
+    width: windowWidth * 0.4,
+    height: windowHeight * 0.22,
+    flex: 1,
+    resizeMode: 'contain',
+  },
   item: {
     justifyContent: 'center',
     alignItems: 'center',
     margin: 10,
     borderRadius: 8,
     backgroundColor: '#0066FF',
+    elevation: 5,
+    opacity: 0.8,
+    shadowColor: '#7F5DF0',
+    shadowOpacity: 0.5,
+    shadowRadius: 3.5,
   },
   title: {
     fontSize: 20,

@@ -23,14 +23,7 @@ const LessonVideos = props => {
           onPress={props => {
             navigation.navigate(item.routeName);
           }}
-          style={{
-            backgroundColor: 'blue',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            padding: 10,
-            alignItems: 'center',
-            borderRadius: 5,
-          }}>
+          style={styles.item}>
           <Text style={{color: '#ffff', fontSize: 20}}>{item.title}</Text>
           <FontAwesome5 name="angle-right" color={'#ffff'} size={28} />
         </TouchableOpacity>
@@ -62,6 +55,19 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+  },
+  item: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 5,
+    backgroundColor: '#0066FF',
+    elevation: 5,
+    opacity: 0.9,
+    shadowColor: '#7F5DF0',
+    shadowOpacity: 0.7,
+    shadowRadius: 3.5,
   },
 });
 

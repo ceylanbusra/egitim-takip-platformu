@@ -22,6 +22,7 @@ import Mentor from '../screens/Mentor/';
 import QuestionTargets from '../screens/QuestionTargets';
 import Profile from '../screens/Profile';
 import Videos from '../screens/videos';
+import SplashScreen from '../screens/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -30,7 +31,8 @@ function Router({navigation}) {
   return (
     //Stack screen
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator  initialRouteName="SplashScreen">
+      <Stack.Screen options={{headerShown:false}} name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
