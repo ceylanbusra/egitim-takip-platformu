@@ -11,7 +11,7 @@ import {
 const ForgotPassword = () => {
   return (
     <SafeAreaView>
-      <Text>this is an Forgot password screen</Text>
+      <Text>this is a Forgot password screen</Text>
     </SafeAreaView>
   );
 };

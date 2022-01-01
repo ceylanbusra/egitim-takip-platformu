@@ -7,9 +7,10 @@ import {
 } from '@react-navigation/native-stack';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 
 //Sayfa importları
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+
 import LoginScreen from '../screens/Login';
 import MainPage from '../screens/MainPage';
 import SignUp from '../screens/SignUp';
@@ -18,21 +19,28 @@ import LessonsVideos from '../screens/LessonVideos';
 import Chronometer from '../screens/Chronometer';
 import Graph from '../screens/Graph';
 import LessonVideos from '../screens/LessonVideos';
-import Mentor from '../screens/Mentor/';
+import Mentor from '../screens/Mentor';
 import QuestionTargets from '../screens/QuestionTargets';
 import Profile from '../screens/Profile';
 import Videos from '../screens/videos';
 import SplashScreen from '../screens/SplashScreen';
+import MentorChange from '../screens/MentorChange';
 
+//obje oluşturma
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
+
 
 function Router({navigation}) {
   return (
     //Stack screen
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName="SplashScreen">
-      <Stack.Screen options={{headerShown:false}} name="SplashScreen" component={SplashScreen} />
+      <Stack.Navigator initialRouteName="SplashScreen">
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="SplashScreen"
+          component={SplashScreen}
+        />
         <Stack.Screen name="LoginScreen" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
@@ -44,9 +52,13 @@ function Router({navigation}) {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Graph" component={Graph} />
         <Stack.Screen name="Videos" component={Videos} />
+        <Stack.Screen name="MentorChange" component={MentorChange} />
       </Stack.Navigator>
     </NavigationContainer>
   );
+  //Top Tabs
+  
+
   //Bottom Tab
   function MyTabs(props) {
     return (
