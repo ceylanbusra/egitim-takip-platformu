@@ -7,8 +7,8 @@ import Carousel, { Pagination } from 'react-native-snap-carousel'
 
 
 // To make doctor tab responsive, gets window info.
-export const SLIDER_WIDTH = Dimensions.get('window').width + 86
-export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.54)
+export const SLIDER_WIDTH = Dimensions.get('window').width + 80
+export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 
 
 
@@ -16,26 +16,31 @@ const CarouselCards = () => {
   const [index, setIndex] = useState(0)
   const isCarousel = useRef(null)
   const [dataa, setDataa] = useState([]);
+  const [id,setId]=useState(null);
   const data=[
     {
+      id:"1",
         first_name:"Büşra",
         last_name: "Ceylan",
         role: "Danışman",
-        profile_photo: require("../assets/profile.jpg")
+        profile_photo: require("../assets/girlProfile.png")
       },
       {
+        id:"2",
         first_name:"Döndü",
         last_name: "Ceylan",
         role: "Danışman",
        profile_photo: require("../assets/profile.jpg")
       },
       {
+        id:"3",
         first_name:"Fatma",
         last_name: "Ceylan",
         role: "Danışman",
       profile_photo: require("../assets/profil.jpg")
       },
       {
+        id:"4",
         first_name:"Ayşe",
         last_name: "Ceylan",
         role: "Danışman",
@@ -50,32 +55,38 @@ const CarouselCards = () => {
     <View>
       <Carousel
         layout = "default"
+        
         ref = { isCarousel }
         data = { data }
         
+        
         renderItem = {({item}) => (
+          
 
-          <View>
+          <View style={styles.mainContainer}>
             <View style = { styles.container } >
             <Image
                 source = {item.profile_photo }
+                style={styles.image}
             />
             <Text style = { styles.name }>{ item.first_name }{' '}{ item.last_name }</Text>
             <Text style = { styles.profession }>{ item.role }</Text>
+            <Text style = { styles.profession }>{ item.id }</Text>
             </View>
           </View>
          
         )}
-        sliderWidth = { SLIDER_WIDTH * 0.9 }
-        itemWidth = { ITEM_WIDTH * 0.7 }
-        inactiveSlideShift = { 16 }
+        sliderWidth = { SLIDER_WIDTH  }
+        itemWidth = { ITEM_WIDTH  }
+        inactiveSlideShift = { 0 }
         useScrollView = { true }
         onSnapToItem = {(index) => setIndex(index)}
         
         loop = { true }
         firstItem = { 1 }
-        inactiveSlideScale = { 0.85 }
-        inactiveSlideOpacity = { 0.85 }
+       inactiveSlideScale = { 0.9 }
+        inactiveSlideOpacity = { 0.9 }
+       inactiveSlideShift={6}
         initialNumToRender = { data.length }
         loopClonesPerSide = { data.length }
       />
@@ -101,30 +112,40 @@ const CarouselCards = () => {
 
 // Styles of the carousel view components : photo as image, name and profession as text.
 const styles = StyleSheet.create({
+  mainContainer:{
+    
+  },
   container: {
-    backgroundColor :'red',
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor :'blue',
     borderRadius : 12,
     paddingBottom : 7,
-    width: '30%',
-    height:'70%',
+    width : ITEM_WIDTH,
+    height:ITEM_WIDTH*1.3,
+    
   },
   image: {
-    width : '30%',
-    height : '30%',
+    width : ITEM_WIDTH*0.7,
+    height:ITEM_WIDTH*0.7,
+    resizeMode:'stretch',
+    
+
     borderTopLeftRadius : 12,
     borderTopRightRadius : 12,
   },
   name: {
     color : 'black',
-    fontSize : 12,
+    fontSize : 20,
     paddingLeft : 12,
     paddingTop : 12,
-    height: 20,
+    
+  
     
   },
   profession: {
     color : '#f0f0f0',
-    fontSize : 12,
+    fontSize : 20,
     paddingLeft : 12,
   }
 })
