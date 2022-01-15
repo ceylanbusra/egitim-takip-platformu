@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Dimensions,
 } from 'react-native';
+import styles from './ChronometerStyle';
 const screen = Dimensions.get('window');
 const formatNumber = number =>`0, ${number}`.slice(-2);
 
@@ -46,48 +47,15 @@ const Chronometer = () => {
       <StatusBar style="light-content" />
       <Text style={styles.timerText}> {mins+':'+secs}</Text>
       <TouchableOpacity onPress={toogle} style={styles.button}>
-        <Text style={styles.buttonText}> {isActive ? 'Pause' : 'Start'} </Text>
+        <Text style={styles.buttonText}> {isActive ? 'Duraklat' : 'Başlat'} </Text>
       </TouchableOpacity>
       <TouchableOpacity
         onPress={reset}
         style={[styles.button, styles.buttonReset]}>
-        <Text style={[styles.buttonText, styles.buttonTextReset]}> Reset</Text>
+        <Text style={[styles.buttonText, styles.buttonTextReset]}> Sıfırla</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
 };
 export default Chronometer;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#07121b',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {
-    borderWidth: 10,
-    borderColor: '#b9aaff',
-    width: screen.width / 2,
-    height: screen.width / 2,
-    borderRadius: screen.width / 2,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonText: {
-    fontSize: 45,
-    color: '#b9aaff',
-  },
-  timerText: {
-    color: '#fff',
-    fontSize: 90,
-    marginBottom: 20,
-  },
-  buttonReset: {
-    marginTop: 20,
-    borderColor: '#ff851b',
-  },
-  buttonTextReset: {
-    color: '#ff8f1b',
-  },
-});

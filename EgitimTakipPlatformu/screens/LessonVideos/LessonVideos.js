@@ -9,9 +9,11 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
+import styles from './LessonVideosStyle';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {useNavigation} from '@react-navigation/native';
-import lesson_data from '../data/lesson_data.json';
+//import lesson_data from '../../data/lesson_data.json';
+import lesson_data from '../../data/lesson_data.json';
 
 const LessonVideos = props => {
   const [selectedId, setSelectedId] = useState(null);
@@ -43,32 +45,6 @@ const LessonVideos = props => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
-  },
-  item: {
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 32,
-  },
-  item: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
-    alignItems: 'center',
-    borderRadius: 5,
-    backgroundColor: '#0066FF',
-    elevation: 5,
-    opacity: 0.9,
-    shadowColor: '#7F5DF0',
-    shadowOpacity: 0.7,
-    shadowRadius: 3.5,
-  },
-});
+
 
 export default LessonVideos;

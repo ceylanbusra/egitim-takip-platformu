@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import LottieView from 'lottie-react-native';
+import styles from './LoginStyle';
 
 
 const LoginScreen = ({navigation}) => {
@@ -20,7 +21,7 @@ const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.photograph}>
-      <LottieView style={styles.photo} source={require('../assets/happy-students1.json')} autoPlay loop />
+      <LottieView style={styles.photo} source={require('../../assets/happy-students1.json')} autoPlay loop />
 
       </View>
       <View style={styles.content}>
@@ -84,47 +85,6 @@ const LoginScreen = ({navigation}) => {
   );
 };
 
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    backgroundColor: '#FBFCFD',
-    padding: 10,
-  },
-  photograph: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10,
-  },
-  photo: {
-    width: '100%',
-    resizeMode: 'contain',
-  },
-  content: {
-    flex: 3,
-    padding: 10,
-  },
-  textInput: {
-    borderBottomWidth: 1,
-    borderColor: '#999dec',
-    marginVertical: 15,
-    width: '100%',
-    padding:10,
-  
-    
-  },
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '85%',
-    height: '12%',
-    backgroundColor: '#0066FF',
-    elevation: 5,
-    opacity: 0.8,
-    borderRadius: 8,
-    margin: 20,
-    marginTop: 30,
-  },
-});
+
 
 export default LoginScreen;

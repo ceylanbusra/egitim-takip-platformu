@@ -8,8 +8,9 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import styles from './MentorStyle';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import MentorChange from './MentorChange'
+
 
 const Mentor = ({navigation}) => {
   return (
@@ -19,7 +20,7 @@ const Mentor = ({navigation}) => {
           <View style={styles.HsecondContainer}>
             <Image
               style={styles.Image}
-              source={require('../assets/danisman.png')}></Image>
+              source={require('../../assets/danisman.png')}></Image>
           </View>
         </View>
         <View style={styles.bodyContainer}>
@@ -31,7 +32,7 @@ const Mentor = ({navigation}) => {
           </View>
 
           <View style={styles.Container}>
-            <Text style={styles.text}>19.05.1999</Text>
+            <Text style={styles.text}>Bilgisayar Mühendisi</Text>
           </View>
           <View style={styles.Container}>
             <Text style={styles.text}>Antalya</Text>
@@ -53,59 +54,4 @@ const Mentor = ({navigation}) => {
   );
 };
 export default Mentor;
-const styles = StyleSheet.create({
-  headerContainer: {
-    flex: 3,
-    backgroundColor: '#9575cd',
-  },
-  bodyContainer: {
-    flex: 5,
-    backgroundColor: '#e0e0e0',
-    alignItems: 'center',
-  },
-  mainContainer: {
-    flex: 1,
-  },
-  Image: {
-    width: 100,
-    resizeMode: 'contain',
-  },
-  HsecondContainer: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-    margin: 10,
-  },
-  scrollView: {
-    backgroundColor: '#e0e0e0',
-  },
-  text: {
-    fontSize: 22,
-    color: 'black',
-    opacity: 0.7,
-  },
-  text2: {
-    fontSize: 24,
-    color: 'white',
-  },
-  Container: {
-    width: '90%',
-    height: 60,
-    backgroundColor: 'white',
-    marginVertical: 10,
-    borderRadius: 8,
-    justifyContent: 'center',
-  },
-  Button: {
-    width: '90%',
-    height: 60,
-    backgroundColor: '#0066FF',
-    marginVertical: 10,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+

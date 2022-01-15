@@ -11,20 +11,26 @@ import {createMaterialBottomTabNavigator} from '@react-navigation/material-botto
 
 //Sayfa importları
 
-import LoginScreen from '../screens/Login';
-import MainPage from '../screens/MainPage';
-import SignUp from '../screens/SignUp';
-import ForgotPassword from '../screens/ForgotPassword';
-import LessonsVideos from '../screens/LessonVideos';
-import Chronometer from '../screens/Chronometer';
-import Graph from '../screens/Graph';
-import LessonVideos from '../screens/LessonVideos';
-import Mentor from '../screens/Mentor';
-import QuestionTargets from '../screens/QuestionTargets';
-import Profile from '../screens/Profile';
-import Videos from '../screens/videos';
-import SplashScreen from '../screens/SplashScreen';
-import MentorChange from '../screens/MentorChange';
+//import LoginScreen from '../screens/Login';
+//import MainPage from '../screens/QuestionTargets/MainPage';
+import SignUp from '../screens/SignUp/SignUp';
+//import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
+//import LessonsVideos from '../screens/LessonVideos/LessonVideos';
+//import Chronometer from '../screens/Chronometer';
+import MainPage from '../screens/MainPage/MainPage';
+import LoginScreen from '../screens/login/Login';
+import ForgotPassword from '../screens/ForgotPassword/ForgotPassword';
+import Chronometer from '../screens/Chronometer/Chronometer';
+//mport Graph from '../screens/Graph/Graph';
+import Graph from '../screens/Graph/Graph';
+import LessonVideos from '../screens/LessonVideos/LessonVideos';
+import Mentor from '../screens/Mentor/Mentor';
+import QuestionTargets from '../screens/QuestionTargets/QuestionTargets';
+import Profile from '../screens/Profil/Profile';
+import Videos from '../screens/Videos/videos';
+//import SplashScreen from '../screens/SplashScreen/SplashScreen';
+import SplashScreen from '../screens/SplashScreen/SplashScreen';
+import MentorChange from '../screens/MentorChange/MentorChange';
 
 //obje oluşturma
 const Stack = createNativeStackNavigator();

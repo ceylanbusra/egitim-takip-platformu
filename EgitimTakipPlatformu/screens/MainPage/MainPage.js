@@ -12,6 +12,8 @@ import {
   FlatList,
   Dimensions,
 } from 'react-native';
+import styles from './MainPageStyle';
+
 import {useNavigation} from '@react-navigation/native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -20,37 +22,37 @@ const DATA = [
   {
     id: '1',
     title: 'Ders Videoları',
-    image: require('../assets/lessoVideos2.png'),
+    image: require('../../assets/lessoVideos2.png'),
     routeName: 'LessonVideos',
   },
   {
     id: '2',
     title: 'Soru Hedefleri',
-    image: require('../assets/soru_hedefleri.png'),
+    image: require('../../assets/soru_hedefleri.png'),
     routeName: 'QuestionTargets',
   },
   {
     id: '3',
     title: 'Profilim',
-    image: require('../assets/danisman.png'),
+    image: require('../../assets/danisman.png'),
     routeName: 'Profile',
   },
   {
     id: '4',
     title: 'Grafiklerim',
-    image: require('../assets/graph.png'),
+    image: require('../../assets/graph.png'),
     routeName: 'Graph',
   },
   {
     id: '5',
     title: 'Danışman',
-    image: require('../assets/danisman.png'),
+    image: require('../../assets/danisman.png'),
     routeName: 'Mentor',
   },
   {
     id: '6',
     title: 'Kronometre',
-    image: require('../assets/clock.png'),
+    image: require('../../assets/clock.png'),
     routeName: 'Chronometer',
   },
 ];
@@ -90,7 +92,7 @@ const MainPage = props => {
   );
 };
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
@@ -119,6 +121,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fbfcfd',
   },
-});
+});*/
 
 export default MainPage;

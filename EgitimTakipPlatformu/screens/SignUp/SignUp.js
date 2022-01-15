@@ -13,7 +13,7 @@ const SignUp = ({navigation}) => {
     <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
         <Image
-          source={require('../assets/Students-2.png')}
+          source={require('../../assets/Students-2.png')}
           style={{width: '90%', resizeMode: 'contain'}}></Image>
       </View>
       <View style={{flex: 4, padding: 10}}>
