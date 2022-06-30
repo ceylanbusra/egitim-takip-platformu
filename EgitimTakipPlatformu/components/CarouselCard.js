@@ -86,7 +86,7 @@ const CarouselCards = () => {
         firstItem = { 1 }
        inactiveSlideScale = { 0.9 }
         inactiveSlideOpacity = { 0.9 }
-       inactiveSlideShift={6}
+      
         initialNumToRender = { data.length }
         loopClonesPerSide = { data.length }
       />

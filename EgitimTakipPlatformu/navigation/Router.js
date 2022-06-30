@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState,useContext, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {
@@ -8,6 +8,10 @@ import {
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
+
+
 
 //Sayfa importları
 
@@ -28,39 +32,59 @@ import Mentor from '../screens/Mentor/Mentor';
 import QuestionTargets from '../screens/QuestionTargets/QuestionTargets';
 import Profile from '../screens/Profil/Profile';
 import Videos from '../screens/Videos/videos';
+import teacherMain from '../screens/teacherMain/teacherMain';
+import allStudents from '../screens/allStudents/allStudents';
 //import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import SplashScreen from '../screens/SplashScreen/SplashScreen';
 import MentorChange from '../screens/MentorChange/MentorChange';
+import { AuthContext, AuthContextProvider } from '../context';
+
 
 //obje oluşturma
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 
-function Router({navigation}) {
+const  Router= () =>{
+ 
+
+
+
+
   return (
     //Stack screen
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen">
-        <Stack.Screen
-          options={{headerShown: false}}
-          name="SplashScreen"
-          component={SplashScreen}
-        />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        <Stack.Screen name="Ana Sayfa" component={MyTabs} />
-        <Stack.Screen name="Chronometer" component={Chronometer} />
-        <Stack.Screen name="LessonVideos" component={LessonVideos} />
-        <Stack.Screen name="Mentor" component={Mentor} />
-        <Stack.Screen name="QuestionTargets" component={QuestionTargets} />
-        <Stack.Screen name="Profile" component={Profile} />
-        <Stack.Screen name="Graph" component={Graph} />
-        <Stack.Screen name="Videos" component={Videos} />
-        <Stack.Screen name="MentorChange" component={MentorChange} />
-      </Stack.Navigator>
+    <AuthContextProvider>
+    <NavigationContainer options={{headerShown: false}}>
+  
+      
+          <Stack.Navigator initialRouteName="SplashScreen"  headerShown={false}>
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="SplashScreen"
+            component={SplashScreen}
+          />
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="SignUp" component={SignUp} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+          <Stack.Screen name="Ana Sayfa" component={MyTabs} options={{headerShown: false}} />
+          <Stack.Screen name="Chronometer" component={Chronometer} />
+          <Stack.Screen name="LessonVideos" component={LessonVideos} />
+          <Stack.Screen name="Mentor" component={Mentor} />
+          <Stack.Screen name="QuestionTargets" component={QuestionTargets} />
+          <Stack.Screen name="Profile" component={Profile} />
+          <Stack.Screen name="Graph" component={Graph} />
+          <Stack.Screen name="Videos" component={Videos} />
+          <Stack.Screen name="MentorChange" component={MentorChange} />
+          <Stack.Screen name="teacherMain" component={teacherMain} />
+          <Stack.Screen name="allStudents" component={allStudents} />
+
+
+        </Stack.Navigator>
+          
+        
+      
     </NavigationContainer>
+    </AuthContextProvider>
   );
   //Top Tabs
   

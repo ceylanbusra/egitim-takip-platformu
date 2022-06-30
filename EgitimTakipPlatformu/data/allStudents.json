@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "OgrenciAdi": "Büşra Ceylan",
+    "Numarası": "18010011024",
+    "Bölümü": "Sayısal"
+  },
+  {
+    "id": 1,
+    "OgrenciAdi": "Fatma Ceylan",
+    "Numarası": "18010011024",
+    "Bölümü": "Sözel"
+  },
+  {
+    "id": 2,
+    "OgrenciAdi": "Ayşe Ceylan",
+    "Numarası": "18010011024",
+    "Bölümü": "Eşit Ağırlık"
+  },
+  {
+    "id": 3,
+    "OgrenciAdi": "Emre Uluışık",
+    "Numarası": "20",
+    "Bölümü": "Sayısal"
+  },
+  {
+    "id": 4,
+    "OgrenciAdi": "Esra Nur Erkek",
+    "Numarası": "18010011024",
+    "Bölümü": "Sayısal"
+  },
+  {
+    "id": 5,
+    "OgrenciAdi": "Burak Karagöl",
+    "Numarası": "18010011024",
+    "Bölümü": "Sayısal"
+  },
+  {
+    "id": 6,
+    "OgrenciAdi": "Nihal Bahadır",
+    "Numarası": "18010011024",
+    "Bölümü": "Sözel"
+  }
+]

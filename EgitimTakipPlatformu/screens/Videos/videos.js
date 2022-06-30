@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
+
 import {
   SafeAreaView,
   LayoutAnimation,
@@ -11,7 +12,11 @@ import {
   TouchableOpacity,
   Platform,
   Image,
+  Linking,
+  Pressable
 } from 'react-native';
+import { Thumbnail } from "react-native-thumbnail-video";
+
 import styles from './VideosStyle';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import math_videos_data from '../../data/math_videos_data.json';
@@ -51,13 +56,19 @@ const ExpandableComponent = ({item, onClickFunction}) => {
             onPress={() => alert('Id: ' + item.id + ' val: ' + item.val)}>
             <View
               style={{
-                flex: 1,
-                width: '90%',
-                padding: 15,
+              
+                width: '70%',
+                paddingRight: 15,
+                marginRight: 100,
               }}>
-              <Image
-                style={{resizeMode: 'contain'}}
-                source={require('../../assets/video_player.png')}></Image>
+              <Pressable
+                      onPress={() => Linking.openURL("https://www.youtube.com/watch?v=SdM7NOKMMCQ")}
+                      style={{justifyContent:'center',marginHorizontal:10}}
+                     
+                    >
+
+                     <Thumbnail url={"https://www.youtube.com/watch?v=SdM7NOKMMCQ"} style={styles.thumbnail} />
+                    </Pressable>
               <Text>{item.val}</Text>
             </View>
             <View style={styles.separator} />

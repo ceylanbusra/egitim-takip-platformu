@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "531156296757",
+    "project_id": "egitim-takip-platformu",
+    "storage_bucket": "egitim-takip-platformu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531156296757:android:a6921e09b24d0fa1e0fd7c",
+        "android_client_info": {
+          "package_name": "com.egitimtakipplatformu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531156296757-3lrhtf14se26com8cj1vdoh6d2klelh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs67NEv--u7qcm20uAdT_p-t4qMipTClA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531156296757-3lrhtf14se26com8cj1vdoh6d2klelh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

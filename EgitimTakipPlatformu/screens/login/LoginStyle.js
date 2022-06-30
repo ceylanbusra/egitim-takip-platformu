@@ -41,4 +41,18 @@ export default StyleSheet.create({
         margin: 20,
         marginTop: 30,
       },
+      touchableOpacity:{
+        width: '100%',
+        borderWidth: 1,
+        borderRadius: 10,
+        backgroundColor: '#f0f0f0',
+      },
+      girisYapText:{
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: '#1E2944',
+        marginTop: 20,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+      }
 });

@@ -10,10 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-firebase/app": "^14.5.0",
+    "@react-native-firebase/auth": "^14.7.0",
+    "@react-native-firebase/firestore": "^14.7.0",
     "@react-navigation/material-bottom-tabs": "^6.0.9",
     "@react-navigation/material-top-tabs": "^6.0.6",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "formik": "^2.2.9",
     "lottie-react-native": "^5.0.0",
     "react": "17.0.2",
     "react-native": "0.66.0",
@@ -25,7 +29,11 @@
     "react-native-select-dropdown": "^1.4.0",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-tab-view": "^3.1.1",
-    "react-native-vector-icons": "^9.0.0"
+    "react-native-thumbnail": "^1.1.3",
+    "react-native-thumbnail-video": "^0.1.2",
+    "react-native-vector-icons": "^9.0.0",
+    "tslib": "^2.3.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

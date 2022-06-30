@@ -12,7 +12,7 @@ import {
   FlatList,
   Dimensions,
 } from 'react-native';
-import styles from './MainPageStyle';
+import styles from './teacherMainStyle';
 import StackScreen from '../../StackLayout/index'
 import {useNavigation} from '@react-navigation/native';
 import { AuthContext } from '../../context/auth';
@@ -22,43 +22,20 @@ const windowHeight = Dimensions.get('window').height;
 const DATA = [
   {
     id: '1',
-    title: 'Ders Videoları',
-    image: require('../../assets/lessoVideos2.png'),
-    routeName: 'LessonVideos',
+    title: 'Tüm Öğrenciler ',
+    image: require('../../assets/5251.jpg'),
+    routeName: 'allStudents',
   },
   {
     id: '2',
-    title: 'Soru Hedefleri',
-    image: require('../../assets/soru_hedefleri.png'),
-    routeName: 'QuestionTargets',
-  },
-  {
-    id: '3',
     title: 'Profilim',
-    image: require('../../assets/danisman.png'),
+    image: require('../../assets/profile.jpg'),
     routeName: 'Profile',
   },
-  {
-    id: '4',
-    title: 'Grafiklerim',
-    image: require('../../assets/graph.png'),
-    routeName: 'Graph',
-  },
-  {
-    id: '5',
-    title: 'Danışman',
-    image: require('../../assets/danisman.png'),
-    routeName: 'Mentor',
-  },
-  {
-    id: '6',
-    title: 'Kronometre',
-    image: require('../../assets/clock.png'),
-    routeName: 'Chronometer',
-  },
+ 
 ];
 
-const MainPage = props => {
+const teacherMain = props => {
   const {user} = useContext(AuthContext);
   const [selectedId, setSelectedId] = useState(null);
   const numColumns = 2;
@@ -107,4 +84,4 @@ const MainPage = props => {
 
 
 
-export default MainPage;
+export default teacherMain;

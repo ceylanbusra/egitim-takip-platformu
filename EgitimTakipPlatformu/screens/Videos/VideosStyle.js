@@ -1,4 +1,7 @@
-import {StyleSheet} from 'react-native'
+
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
 export default StyleSheet.create({
 
     container: {
@@ -39,4 +42,14 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
       },
+      linkWrapper: {
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    thumbnail: {
+       width: width - 40,
+        height: height * 0.25,
+        alignItems: "center",
+        justifyContent: "center",
+    },
 });
